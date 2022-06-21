@@ -1,0 +1,14 @@
+@media screen and (max-width: 768px){
+    #navBar{
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width: 769px) {
+    #menuDiv{
+        display: none;        
+    }
+
+}
+

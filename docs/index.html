@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Copatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./Reset.css">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./media-queries.css">
+        <script src="app.js"></script>
+        <title>FETCH | Introduccion a fetch</title>
+    </head>
+    <body>
+        <header>
+            <div id="mainBar">
+                <div class="mainBarDiv">
+                    <img id="logoMain" src="./imagenes/logo.png" alt="logo">                    
+                </div>
+                <div class="mainBarDiv">
+                    <h1>- FETCH -</h1>
+                </div>
+                <div id="menuDiv" class="mainBarDiv" onmouseover="deploy()" onmouseout="contract()">
+                    <a href="#" ><img id="menuMain" src="./imagenes/Menu.png" alt="Menu"></a>
+                        <div id="subSection">
+                            <p class="menuDesp"><a href="">HOME</a></p>
+                            <p class="menuDesp"><a href="">TUS PEDIDOS</a></p>
+                            <p class="menuDesp"><a href="">PRODUCTOS</a></p>
+                            <p class="menuDesp"><a href="">NOVEDADES</a></p>
+                            <p class="menuDesp"><a href="">CONTACTOS</a></p>
+                            <p class="menuDesp"><a href="">ACERCA DE</a></p>
+                        </div>              
+                </div>
+            </div>
+            <div>
+                <nav id="navBar">
+                    <ul>
+                        <li><a href="" title="Meating | HOME" alt="Meating | HOME">HOME</a></li>
+                        <li><a href="" title="Meating | TUS PEDIDOS" alt="Meating | TUS PEDIDOS">TUS PEDIDOS</a></li>
+                        <li><a href="" title="Meating | PRODUCTOS" alt="Meating | PRODUCTOS">PRODUCTOS</a></li>
+                        <li><a href="" title="Meating | NOVEDADES" alt="Meating | NOVEDADES">NOVEDADES</a></li>
+                        <li><a href="" title="Meating | CONTACTOS" alt="Meating | CONTACTOS">CONTACTOS</a></li>
+                        <li><a href="" title="Meating | ACERCA DE" alt="Meating | ACERCA DE">ACERCA DE</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div>
+                <div class="subBody">
+                    <h2>Contanos un poco sobre vos</h2>
+                </div>
+                <div id="mainDiv" class="subBody">
+                    <form id="formSub" name="myForm" action="">
+                        <section class="">
+                            <div class="elemBlock">
+                                <div class="subBody ">
+                                    <input type="text" id="subNombre" name="fNombre" placeholder="Nombre" class="inputText">   
+                                </div>
+                                <div class="subBody">
+                                    <p id="nombreError" class="hiddenError formatoError">Minimo 3 letras</p>
+                                </div>
+                            </div>
+                            <div class="elemBlock">
+                                <div class="subBody ">
+                                    <input type="text" id="subApellido" name="fApellido" placeholder="Apellido" class="inputText">
+                                </div>
+                                <div class="subBody">
+                                    <p id="apeError" class="hiddenError formatoError">Minimo 3 letras</p>
+                                </div>
+                            </div>
+                            <div class="elemBlock">
+                                <div class="subBody ">
+                                    <input type="text" id="subEmail" name="fMail" placeholder="Email" class="inputText">
+                                </div>
+                                <div class="subBody">
+                                    <p id="emailError" class="hiddenError formatoError">No es un formato aceptable de mail</p>
+                                </div>
+                            </div>
+                            <div class="elemBlock">
+                                <div class="subBody ">
+                                    <input type="number" id="subEdad" name="fEdad" placeholder="Edad" class="inputText">
+                                </div>
+                                <div class="subBody">
+                                    <p id="edadError" class="hiddenError formatoError">Número entero mayor a 0 y menor a 100</p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class=""> 
+                            <h3 class="subBody">Como te identificás</h3>                           
+                            <div class="elemBlock2">
+                                <div id="subGenero" class="subBody">
+                                    <label for="Masc">Masculino</label>
+                                    <input type="radio" name="fGenero" id="Masc" value="Masculino">
+                                    <label for="Fem">Femenino</label>
+                                    <input type="radio" name="fGenero" id="Fem" value="Femenino">
+                                    <label for="NoBin">No Binario</label>
+                                    <input type="radio" name="fGenero" id="NoBin" value="No Binario">
+                                </div>
+                            </div>
+                            <h3 class="subBody">Contanos que te interesa</h3>
+                            <div class="elemBlock2">                                
+                                <div id="subTemas" class="subBody">
+                                    <label for="Deportes">Deportes</label>
+                                    <input type="checkbox" name="fTemas" id="Deportes" value="Deportes"> 
+                                    <label for="Musica">Música</label>
+                                    <input type="checkbox" name="fTemas" id="Musica" value="Musica">
+                                    <label for="Juegos">Juegos</label>
+                                    <input type="checkbox" name="fTemas" id="Juegos" value="Juegos"> 
+                                    <label for="Tecnologia">Tecnología</label>
+                                    <input type="checkbox" name="fTemas" id="Tecnologia" value="Tecnologia"> 
+                                    <label for="Otros">Otros</label>
+                                    <input type="checkbox" name="fTemas" id="Otros" value="Otros"> 
+                                </div>                  
+                            </div>
+                            <h3 class="subBody">Tu País</h3>
+                            <div class="elemBlock2"> 
+                                <div class="subBody">                                
+                                    <select id="subPais" class="" name="fPais" id="subPais">
+                                        <option value=""></option>
+                                        <option value="Argentina">Argentina</option>
+                                        <option value="Brasil">Brasil</option>
+                                        <option value="Chile">Chile</option>
+                                        <option value="Uruguay">Uruguay</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <h3 class="subBody">Comentarios</h3>
+                            <div class="elemBlock">
+                                <div class="subBody">                                
+                                    <textarea id="subCom" cols="30" rows="10" class="inputCom"></textarea>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="elemBlock2">                
+                                <div class="subBody">                            
+                                    <button type="button" onclick="clickEnviar()">Enviar</button>
+                                </div>    
+                            </div> 
+                        </section>                                      
+                    </form>
+                </div>
+            </div>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Los datos han sido verificados</h2>
+                    <p id="pNombre" class="pModal">Nombre:</p>
+                    <p id="pApellido" class="pModal">Apellido:</p>
+                    <p id="pEmail" class="pModal">Email:</p>
+                    <p id="pEdad" class="pModal">Edad</p>
+                    <p id="pGenero" class="pModal">Sexo</p>
+                    <p id="pTemas" class="pModal">Temas</p>
+                    <p id="pPais" class="pModal">País</p>
+                </div>            
+            </div>
+            <!-- The Modal -->
+        </main>
+        <footer>
+            <h3>CARNAMOR S.R.L.</h3>
+            <p>Todos los derechos reservados</p>
+            <p>contacto: chucho@elcarnicero.com</p>
+        </footer>
+    </body>
+</html>
